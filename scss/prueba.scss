@@ -1,0 +1,97 @@
+$colorPricipal: #61b160;
+$color:#61b160 ;
+
+@mixin estilo($height , $bgColor, $text) {
+
+    height: $height;
+    background-color: $bgColor;
+    text-align: $text;
+
+    
+}
+
+nav{
+   background-color: $colorPricipal;
+   font-family: 'Bebas Neue', cursive;
+   ul{
+       text-align: center;
+     li{
+         a:hover{
+             background-color: #0ccf67;
+         }
+     }
+   }
+   
+}
+
+header{
+    @include estilo (200px, #108447 , center);
+}
+
+.headerpadre{
+    position: relative;
+
+    
+}
+
+.headerimagen img{
+     height: 50px;
+     margin: 60px;
+}
+
+footer{
+    background-color: $colorPricipal;
+}
+
+.footer1{
+    text-align: center;
+    margin-left: 20px;
+}
+
+.footer2{
+    text-align: center;
+}
+
+.icons{
+    text-align: center;
+}
+
+.lagiladapodre{
+    position: relative;
+}
+
+.lagiladahijo{
+    height: 30px;
+}
+
+.lagiladahijo img{
+    height: 30px;
+}
+
+h2{
+    @if $color == White{
+
+        color: black;
+        font-size: 50px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+
+
+
+
+    }
+
+    @else if $color == blue{
+        color: $color;
+        font-size: 50px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-align: center;
+    }
+
+    @else{
+        color:#61b160;
+        font-size: 40px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+}
+
